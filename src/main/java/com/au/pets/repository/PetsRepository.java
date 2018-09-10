@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface PetsRepository extends MongoRepository <Pet, String> {
+public interface PetsRepository extends MongoRepository <Pet, ObjectId> {
 
-    Pet findById(ObjectId id);
+    List <Pet> findByName(String name);
 }
